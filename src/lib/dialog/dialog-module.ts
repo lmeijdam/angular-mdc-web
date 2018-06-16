@@ -1,35 +1,33 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import { MdcPortalService } from '@angular-mdc/web/common';
 
 import {
-  MdcDialogBackdrop,
   MdcDialogBody,
   MdcDialogButton,
   MdcDialogFooter,
   MdcDialogHeader,
-  MdcDialogHeaderTitle,
-  MdcDialogSurface,
+  MdcDialogHeaderTitle
 } from './dialog-directives';
 
 import { MdcDialogComponent } from './dialog.component';
-import { MdcDialog } from './dialog';
+import { MdcDialog } from './dialog.service';
 
 const DIALOG_DECLARATIONS = [
   MdcDialogComponent,
-  MdcDialogBackdrop,
   MdcDialogBody,
   MdcDialogButton,
   MdcDialogFooter,
   MdcDialogHeader,
-  MdcDialogHeaderTitle,
-  MdcDialogSurface
+  MdcDialogHeaderTitle
 ];
 
 @NgModule({
+  imports: [CommonModule],
   exports: DIALOG_DECLARATIONS,
   declarations: DIALOG_DECLARATIONS,
   providers: [MdcPortalService, MdcDialog],
-  entryComponents: [MdcDialogComponent],
+  entryComponents: [MdcDialogComponent]
 })
 export class MdcDialogModule { }

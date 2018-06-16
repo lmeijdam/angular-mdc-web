@@ -2,24 +2,15 @@ import {
   Directive,
   ElementRef,
   HostBinding,
-  Inject,
   Input,
-  Renderer2,
+  Renderer2
 } from '@angular/core';
 import { MdcRipple } from '@angular-mdc/web/ripple';
 import { MdcButton } from '@angular-mdc/web/button';
 
 @Directive({
-  selector: '[mdc-dialog-surface], mdc-dialog-surface'
-})
-export class MdcDialogSurface {
-  @HostBinding('class.mdc-dialog__surface') isHostClass = true;
-
-  constructor(public elementRef: ElementRef) { }
-}
-
-@Directive({
-  selector: '[mdc-dialog-header], mdc-dialog-header'
+  selector: '[mdcDialogHeader], [mdc-dialog-header], mdc-dialog-header',
+  exportAs: 'mdcDialogHeader',
 })
 export class MdcDialogHeader {
   @HostBinding('class.mdc-dialog__header') isHostClass = true;
@@ -28,7 +19,8 @@ export class MdcDialogHeader {
 }
 
 @Directive({
-  selector: '[mdc-dialog-header-title], mdc-dialog-header-title'
+  selector: '[mdcDialogHeaderTitle], [mdc-dialog-header-title], mdc-dialog-header-title',
+  exportAs: 'mdcDialogHeaderTitle'
 })
 export class MdcDialogHeaderTitle {
   @HostBinding('class.mdc-dialog__header__title') isHostClass = true;
@@ -37,7 +29,8 @@ export class MdcDialogHeaderTitle {
 }
 
 @Directive({
-  selector: '[mdc-dialog-body], mdc-dialog-body'
+  selector: '[mdcDialogBody], [mdc-dialog-body], mdc-dialog-body',
+  exportAs: 'mdcDialogBody'
 })
 export class MdcDialogBody {
   @Input() scrollable: boolean = false;
@@ -50,19 +43,11 @@ export class MdcDialogBody {
 }
 
 @Directive({
-  selector: '[mdc-dialog-footer], mdc-dialog-footer'
+  selector: '[mdcDialogFooter], [mdc-dialog-footer], mdc-dialog-footer',
+  exportAs: 'mdcDialogFooter'
 })
 export class MdcDialogFooter {
   @HostBinding('class.mdc-dialog__footer') isHostClass = true;
-
-  constructor(public elementRef: ElementRef) { }
-}
-
-@Directive({
-  selector: '[mdc-dialog-backdrop], mdc-dialog-backdrop'
-})
-export class MdcDialogBackdrop {
-  @HostBinding('class.mdc-dialog__backdrop') isHostClass = true;
 
   constructor(public elementRef: ElementRef) { }
 }

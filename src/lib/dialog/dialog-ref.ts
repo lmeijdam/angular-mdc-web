@@ -34,13 +34,13 @@ export class MdcDialogRef<T, R = any> {
   }
 
   open(): void {
-    this.componentInstance.open();
+    this.componentInstance.show();
 
     this._afterOpen.next();
     this._afterOpen.complete();
   }
 
-  dismiss(): void {
+  close(): void {
     this._afterClosed.next();
     this._afterClosed.complete();
   }

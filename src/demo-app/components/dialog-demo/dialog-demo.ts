@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject, ViewChild } from '@angular/core';
 import { FormControl, ReactiveFormsModule, FormGroup, Validators } from '@angular/forms';
 
-import { MdcDialog, MdcDialogComponent, MDC_DIALOG_DATA, MdcDialogRef, MdcTextField } from '@angular-mdc/web';
+import { MdcDialog, MdcDialogComponent, MdcDialogRef, MdcTextField } from '@angular-mdc/web';
 
 @Component({
   selector: 'dialog-demo',
@@ -34,8 +34,7 @@ export class DialogDemo {
 })
 export class DialogSimpleExample {
   constructor(
-    public dialogRef: MdcDialogRef<DialogSimpleExample>,
-    @Inject(MDC_DIALOG_DATA) public data: any) { }
+    public dialogRef: MdcDialogRef<DialogSimpleExample>) { }
 }
 
 @Component({
