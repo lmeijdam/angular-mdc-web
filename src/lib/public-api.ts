@@ -2,8 +2,6 @@ export * from './version';
 export * from '@angular-mdc/web/app-bar';
 export * from '@angular-mdc/web/button';
 export * from '@angular-mdc/web/card';
-export * from '@angular-mdc/web/overlay';
-export * from '@angular-mdc/web/portal';
 export * from '@angular-mdc/web/checkbox';
 export * from '@angular-mdc/web/chips';
 export * from '@angular-mdc/web/common';
