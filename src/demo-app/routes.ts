@@ -6,7 +6,7 @@ import { CardDemo } from './components/card-demo/card-demo';
 import { CheckboxDemo, RadioDemo, SelectDemo, SliderDemo, SwitchDemo, TextFieldDemo } from './components/inputs-controls';
 import { ChipsDemo } from './components/chips-demo/chips-demo';
 import { DIALOG_DEMO_ROUTES } from './components/dialog-demo/routes';
-import { DialogDemo } from './components/dialog-demo/dialog-demo';
+import { DialogDemo, DialogTab, DialogServiceTab } from './components/dialog-demo/dialog-demo';
 import { DrawerDemo } from './components/drawer-demo/drawer-demo';
 import { ElevationDemo } from './components/elevation-demo/elevation-demo';
 import { FormFieldDemo } from './components/inputs-controls/form-field-demo/form-field-demo';
@@ -33,6 +33,8 @@ export const DEMO_ROUTES = [
   ChipsDemo,
   CliGuide,
   DialogDemo,
+  DialogTab,
+  DialogServiceTab,
   DrawerDemo,
   ElevationDemo,
   FabDemo,
