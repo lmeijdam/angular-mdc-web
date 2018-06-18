@@ -1,7 +1,17 @@
+import { ViewContainerRef } from '@angular/core';
+
+import { ComponentType } from '@angular-mdc/web/common';
+import { MdcDialogComponent } from './dialog.component';
+
 /** Valid ARIA roles for a dialog element. */
 export type DialogRole = 'dialog' | 'alertdialog';
 
-export class MdcDialogConfig {
+export class MdcDialogConfig<D = any> {
+  /** Component to use as the container for the dialog. */
+  containerComponent?: ComponentType<MdcDialogComponent>;
+
+  viewContainerRef?: ViewContainerRef;
+
   /** ID for the dialog. If omitted, a unique one will be generated. */
   id?: string;
 
@@ -19,4 +29,10 @@ export class MdcDialogConfig {
 
   /** Whether the user can click outside to close the dialog */
   clickOutsideToClose?: boolean = true;
+
+  /** Whether the dialog has a background. */
+  hasBackdrop?: boolean = true;
+
+  /** Data to be injected into the dialog content. */
+  data?: D | null = null;
 }
